@@ -1,21 +1,3 @@
-//Consulta `https://api.exchangeratesapi.io/v1/convert?access_key=${process.env.API_Access_Key}&from=${from}&to=${to}&amount=${amount}`
-// test `https://api.exchangeratesapi.io/v1/convert?access_key=f92d251cc831ccbcdd8a824035479c0d&from=GBP&to=JPY&amount=25`
-// https://api.exchangeratesapi.io/v1/latest?access_key=f92d251cc831ccbcdd8a824035479c0d
-// https://api.exchangeratesapi.io/v1/latest?access_key=f92d251cc831ccbcdd8a824035479c0d
-
-
-
-// http://api.exchangeratesapi.io/v1/latest?access_key=ba8e537252dbfb611172a4c440328b4e&format=1
-
-
-
-// http://api.exchangeratesapi.io/v1/convert?access_key=ba8e537252dbfb611172a4c440328b4e&from=USD&to=EUR&amount=25
-// Convert endpoint https://api.exchangeratesapi.io/v1/convert?access_key=API_KEY&from=GBP&to=JPY&amount=25
-
-// curl -X GET "https://exchange-rates-api.oanda.com/v2/currencies.json?api_key=m8Ow9VeXpMxvUQ5udz5h6lrx&data_set=CUCB" \
-//  -H "Accept: application/json" \
-//  -H "Authorization: m8Ow9VeXpMxvUQ5udz5h6lrx" \
-
 import axios from 'axios';
 import { ExchangeResponse } from '@/types';
 
