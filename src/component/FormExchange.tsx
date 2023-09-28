@@ -12,7 +12,7 @@ export default function FormExchange({ currencies }: { currencies: Currency[] })
     const [result, setResult] = useState<string | number>("result");
     const [convert, setConvert] = useState<string>("Convert")
     const [refreshDropdown, setRefreshDropdown] = useState(false);
-    
+
 
     async function getPair() {
         console.log(amount)
@@ -45,9 +45,9 @@ export default function FormExchange({ currencies }: { currencies: Currency[] })
     }
 
     return (
-        <main className="flex min-h-full flex-col items-center" style={{ marginTop: 24 }}>
+        <main className="flex min-h-full flex-col items-center p-10" >
             <h1>Exchange</h1>
-            <ScrollShadow hideScrollBar style={{ marginTop: 10 }}>
+           
                 <div >
                     <Input
                         type="number"
@@ -58,20 +58,20 @@ export default function FormExchange({ currencies }: { currencies: Currency[] })
                         }}
                     />
 
-                    <div className="flex grid grid-cols-2 gap-2 items-center mt-10" style={{ marginTop: 10 }}>
+                    <div className="flex flex-row flex-wrap justify-between items-center mt-10" style={{ marginTop: 10 }}>
                         <div className="flex flex-col items-center">
                             <h2>from</h2>
-                            <DropdownFrom currencies={currencies} onChange={handleFrom} refresh={refreshDropdown}/>
+                            <DropdownFrom currencies={currencies} onChange={handleFrom} refresh={refreshDropdown} />
                         </div>
 
                         <div className="flex flex-col items-center object-right">
                             <h2>to</h2>
-                            <DropdownFrom currencies={currencies} onChange={handleTo} refresh={refreshDropdown}/>
+                            <DropdownFrom currencies={currencies} onChange={handleTo} refresh={refreshDropdown} />
                         </div>
                     </div>
                 </div>
 
-            </ScrollShadow>
+      
 
             <Button style={{ marginTop: 10 }} color="success" onClick={() => {
                 if (convert == "Convert")
