@@ -9,8 +9,9 @@ export default function Home() {
   console.log(options)
 
   return (
-
-    <FormExchange currencies={options} />
+    <div className="flex justify-center p-14">
+      <FormExchange currencies={options} />
+    </div>
 
   )
 }

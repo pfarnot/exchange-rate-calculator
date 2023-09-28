@@ -13,7 +13,7 @@ import { Currency } from "@/types";
 interface DropdownFromProps {
   currencies: Currency[];
   onChange: (currencyCode: string) => void;
-  refresh : boolean;
+  refresh: boolean;
 }
 
 const DropdownFrom: React.FC<DropdownFromProps> = ({ currencies, onChange, refresh }) => {
@@ -45,11 +45,10 @@ const DropdownFrom: React.FC<DropdownFromProps> = ({ currencies, onChange, refre
       <DropdownTrigger>
         <Button variant="bordered">{menuOption}</Button>
       </DropdownTrigger>
-      <ScrollShadow className="h-[300px]">
-        <DropdownMenu aria-label="Dynamic Actions">
-          {listOptions}
-        </DropdownMenu>
-      </ScrollShadow>
+
+      <DropdownMenu aria-label="Dynamic Actions">
+        {listOptions}
+      </DropdownMenu>
     </Dropdown>
   );
 };
